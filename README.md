@@ -1,4 +1,4 @@
-# Descripción del proyecto
+# @idddev/typescript-express-mongoose-kickstart
 
 El proyecto es una plantilla para crear una aplicación web con Node.js y Express, usando TypeScript como lenguaje de programación y Mongoose como ORM para MongoDB. El objetivo de esta plantilla es ofrecer una base sólida para el desarrollo de aplicaciones web escalables y mantenibles.
 
@@ -51,7 +51,7 @@ Para arrancar a usar esta plantilla, siga los siguientes pasos:
 
 1. Clone este repositorio:
 ```shell
-git clone 
+git clone https://github.com/idddev/typescript-express-mongoose-kickstart.git
 ```
 
 2. Instalar las dependencias:
