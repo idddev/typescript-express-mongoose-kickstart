@@ -1,0 +1,28 @@
+version: '3.9'
+services:
+  mongodb:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGODB_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_PASS}
+    ports:
+      - 27017:27017
+    networks:
+      - my_network
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      SERVER_PORT: ${SERVER_PORT}
+    env_file:
+      - .env
+    depends_on:
+      - mongodb
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+    networks:
+      - my_network
+
+networks:
+  my_network:
